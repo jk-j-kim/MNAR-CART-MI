@@ -59,24 +59,21 @@
 # A equals 1 for all observed-vote training rows, it cannot split the vote tree
 # but can inform the covariate trees.
 #
-# Expected directory contents:
-#   mnar_cart_supplementals/
-#     mnar_sim_estimands.R
+# Expected directory contents (the folder containing mnarcart_supplementals.Rproj):
+#     section 4) mnarcart to simulation.R
 #     sim_pop.csv
 #
-# Usage (run from any working directory):
-#   Rscript mnar_sim_estimands.R
-#   Rscript mnar_sim_estimands.R <gamma_gen> <batch>
-#   Rscript mnar_sim_estimands.R <gamma_gen> <batch> <gamma_imp_csv>
-#   Rscript mnar_sim_estimands.R <gamma_gen> <batch> <gamma_imp_csv> <reps_per_batch>
+# Usage: open mnarcart_supplementals.Rproj in RStudio (or set the working
+# directory to this folder), then either source the script or run, from a terminal
+# in this folder:
+#   Rscript "section 4) mnarcart to simulation.R" <gamma_gen> <batch>
+#   Rscript "section 4) mnarcart to simulation.R" <gamma_gen> <batch> <gamma_imp_csv>
+#   Rscript "section 4) mnarcart to simulation.R" <gamma_gen> <batch> <gamma_imp_csv> <reps_per_batch>
 #
 # The third argument overrides the scenario list for one run, for example
 # "0,0.25,0.5". Leave it off (pass "") to use the list defined below.
 # The fourth argument overrides how many reps this batch covers (default 250),
 # so one can split a g_gen's total reps across more, smaller array tasks.
-#
-# The third argument overrides the scenario list for one run, for example
-# "0,0.25,0.5". Leave it off to use the list defined below.
 # =============================================================================
 
 # Paths and libraries ---------------------------------------------------------
